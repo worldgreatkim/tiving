@@ -1,0 +1,178 @@
+body a, button, dd, div, dl, dt, html, input, label, li, p, span, td, textarea, th, ul {
+    font-family: Noto Sans KR, -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    margin-bottom: 50px;
+}
+.title{
+    font-weight: bold;
+    color: #ff153c;
+    font-size: 35px;
+}
+.main-header {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    left: 0;
+    right: 0;
+    width: calc(100vw - var(--scrollbar-width));
+}
+
+.logo img {
+    height: 40px; /* 로고의 높이를 조정하세요 */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.join-btn, .login-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.join-btn {
+    background-color: #e50914;
+    color: white;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    
+}
+
+.main-page {
+    width: 100%;
+    height: 85vh;
+    max-height: 50rem;
+    background-image: url(/img/moweb-img-gradation-240320.png), url(https://image.tving.com/ntgs/operation/onboard/2024/05/01/1714526304_1.png/dims/resize/F_webp,720);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat;
+    -webkit-background-position: bottom, top;
+    background-position: bottom, top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.667rem;
+    position: relative; /* 추가된 부분 */
+    
+}
+
+.main-page::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+@media (min-width: 500px) {
+    .main-page {
+        height: 95vh;
+        max-height: 68vw;
+        background-image: url(/img/pc-img-gradation-240320.png), url(https://image.tving.com/ntgs/operation/onboard/2024/05/01/1714526297_1.png/dims/resize/F_webp,2048);
+        background-color: rgba(0, 0, 0, 0.5); /* 반투명 오버레이 설정 */
+    }
+}
+
+.message-box {
+    text-align: center;
+    margin-top: -1.5rem;
+}
+
+.message {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.33;
+    opacity: 1; /* 수정된 부분 */
+    animation: fadeIn 1.5s 0.2s forwards; /* 수정된 부분 */
+}
+
+.message-title {
+    color:#ff153c;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.33;
+    opacity: 1; /* 수정된 부분 */
+    animation: fadeIn 1.5s 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.main-btn{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff153c;
+    height: 4.083rem;
+    padding: 0 3.35rem 0 3.35rem;
+    font-size: 1.333rem;
+    margin: 2.8rem auto 0;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px ;
+    min-width: 22.5rem;
+    border: none;
+}
+
+/* 미디어 쿼리로 작은 화면에서 폰트 크기 조정 */
+@media (max-width: 768px) {
+    .message {
+        font-size: 1.5rem; /* 작은 화면에서 폰트 크기 조정 */
+    }
+    .message-title{
+        font-size: 1.5rem;
+    }
+
+    .main-btn {
+        font-size: 1rem; /* 작은 화면에서 버튼 폰트 크기 조정 */
+        padding: 0 2rem; /* 작은 화면에서 버튼 패딩 조정 */
+        height: 3rem; /* 작은 화면에서 버튼 높이 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .message {
+        font-size: 1.2rem; /* 더 작은 화면에서 폰트 크기 조정 */
+    }
+
+    .main-btn {
+        font-size: 0.8rem; /* 더 작은 화면에서 버튼 폰트 크기 조정 */
+        padding: 0 1.5rem; /* 더 작은 화면에서 버튼 패딩 조정 */
+        height: 2.5rem; /* 더 작은 화면에서 버튼 높이 조정 */
+    }
+}
