@@ -1,0 +1,186 @@
+body {
+    margin: 0px;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.detailed-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.detailed-mini-title {
+    font-weight: bold;
+    color: #ff153c;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.detailed-mini-title2{
+    font-weight: bold;
+    color: black;
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: hsla(0, 0%, 100%, .7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, .3);
+}
+
+.detailed-mini-img {
+    width: 50%;
+    height: auto;
+    margin-top: 14.33px;
+    margin-bottom: 14.33px;
+}
+
+.detailed-left {
+    width: 70%;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.detailed-left-title {
+    position: relative;
+    padding-top: 20px;
+}
+
+.detailed-btn {
+    margin: 20px 0;
+}
+
+.btn {
+    position: relative;
+    margin-right: 1.333rem;
+    padding: 1.5rem 5rem;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.89;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    backdrop-filter: blur(30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: none;
+}
+
+button {
+    border: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    width: 300px;
+    height: 80px;
+    padding: 14.391px 47.971px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    transition: none;
+}
+
+.btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+    transform: scale(1.1); /* 크기를 10% 증가 */
+    
+    
+}
+
+.detailed-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.more-link {
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.more-link:hover,
+.more-link:focus {
+    text-decoration: none;
+}
+
+.detailed-right {
+    width: 30%;
+    height: auto;
+    order: 2; /* 기본 순서 */
+}
+
+@media (max-width: 767px) {
+    .detailed-wrapper {
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+        height: auto; /* 화면을 가득 채우도록 설정 */
+        padding: 0;
+    }
+
+    .detailed-right {
+        order: -1;
+        width: 100%;
+    }
+
+    .detailed-right img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .detailed-left {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .tags .tag {
+        font-size: 0.875rem;
+        padding: 4px 8px;
+    }
+
+    .detailed-mini-img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .detailed-btn{
+        display: inline;
+    }
+}
